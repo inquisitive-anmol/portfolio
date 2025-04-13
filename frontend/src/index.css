@@ -67,3 +67,8 @@ html.has-scroll-dragging {
 .before\:animate-borderMove {
   animation: borderMove 3s infinite linear;
 } */
+
+
+.zindex {
+  z-index: 9999 !important;
+}

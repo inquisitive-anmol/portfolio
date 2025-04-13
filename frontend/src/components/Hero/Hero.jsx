@@ -7,7 +7,7 @@ const Hero = () => {
     <div
       data-scroll
       data-scroll-speed="1"
-      className="hero-section w-full relative flex items-center justify-cente"
+      className="hero-section w-full relative flex items-center justify-center bg-amber-600"
     >
       <motion.div
         initial={{ opacity: 0, y: 20 }}

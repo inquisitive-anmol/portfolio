@@ -14,6 +14,8 @@ const Header = () => {
 
   const innerWidth = window.innerWidth;
   const width = innerWidth > 460 ? "450px" : "370px";
+  const initial = { width: 0, height: 0, position: "absolute" };
+  const animate = { width: width, height: "700px", position: "absolute" };
 
   return (
     <div className="w-full relative min-h-20 p-4 md:px-6 lg:px-8 lg:py-6 flex items-center justify-between">
@@ -21,19 +23,47 @@ const Header = () => {
         <AnimatedHeading />
       </div>
       <motion.div
-        initial={{ width: 0, height: 0, position: "absolute" }}
-        animate={{ width: width, height: "700px", position: "absolute" }}
+        initial={initial}
+        animate={click ? animate : initial}
         transition={{ duration: 2, ease: "easeInOut" }}
-        className="absolute flex items-start justify-end top-2 right-2 sm:top-10 p-2 sm:right-12 rounded-xl bg-amber-400"
+        className="absolute flex items-start justify-end top-0 right-0 sm:top-8 p-3 sm:right-8 rounded-xl bg-amber-400 zindex"
       >
-        <AnimatedButton
+        {/* <AnimatedButton
           text="Menu"
           spanClassName="text-white font-medium"
           divClassName="right-6 top-3"
           className="border-2 border-white py-2 px-3 rounded-full"
           handleOnClick={handleOnClick}
           index={1}
-        />
+        /> */}
+        <motion.div
+          initial={{ display: "block" , opacity: 1}}
+          animate={click ? { display: "none", opacity: 0 } : { display: "block", opacity: 1 }}
+          transition={{ duration: 0.9, ease: "easeInOut", delay: 0.5 }}
+        >
+          <AnimatedButton
+            text="Menu"
+            spanClassName="text-white font-medium"
+            divClassName={`right-6 top-3`}
+            className="border-2 border-white py-2 px-3 rounded-full"
+            handleOnClick={handleOnClick}
+            index={1}
+          />
+        </motion.div>
+        <motion.div
+          initial={{ display: "none", opacity: 0 }}
+          animate={click ? { display: "block", opacity: 1 } : { display: "none", opacity: 0 }}
+          transition={{ duration: 0.9, ease: "easeInOut", delay: 0.5 }}
+        > 
+          <AnimatedButton
+            text="Close"
+            spanClassName="text-white font-medium"
+            divClassName={`right-14 top-10`}
+            className="border-2 border-white py-2 px-3 rounded-full"
+            handleOnClick={handleOnClick}
+            index={0}
+          />
+        </motion.div>
       </motion.div>
     </div>
   );
