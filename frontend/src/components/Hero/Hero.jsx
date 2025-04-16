@@ -23,7 +23,7 @@ const Hero = () => {
           className="w-32 h-32 sm:w-36 sm:h-36 rounded-full overflow-hidden xl:w-40 xl:h-40"
         >
           <img
-            src="https://images.unsplash.com/photo-1554151228-14d9def656e4?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://res.cloudinary.com/dqhhryg7n/image/upload/v1744824614/WhatsApp_Image_2025-04-16_at_22.54.16_138d98f9_ckobsw.jpg"
             alt="face"
             className="w-full h-full object-cover object-center rounded-full"
           />

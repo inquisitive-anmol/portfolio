@@ -33,14 +33,6 @@ const Header = () => {
         transition={{ duration: 2, ease: "easeInOut" }}
         className="absolute flex items-start justify-end top-0 right-0 sm:top-8 sm:right-8 rounded-xl bg-[#00d4ff]/95 zindex"
       >
-        {/* <AnimatedButton
-          text="Menu"
-          spanClassName="text-white font-medium"
-          divClassName="right-6 top-3"
-          className="border-2 border-white py-2 px-3 rounded-full"
-          handleOnClick={handleOnClick}
-          index={1}
-        /> */}
         <motion.div
           initial={{ display: "none", opacity: 0 }}
           animate={
