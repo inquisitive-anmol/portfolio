@@ -13,6 +13,10 @@ const Header = () => {
     console.log(click);
   };
 
+  const handleClickOnLink = () => {
+    setClick(false);
+  };
+
   const innerWidth = window.innerWidth;
   const width = innerWidth > 460 ? "450px" : "370px";
   const initial = { width: 0, height: 0, position: "absolute" };
@@ -47,7 +51,7 @@ const Header = () => {
           transition={{ duration: 0.5, ease: "easeInOut", delay: 0.8 }}
           className="absolute left-0 top-0 flex flex-col items-center justify-center rounded-lg w-[75%] h-full"
         >
-          <MenuLinks />
+          <MenuLinks handleClickOnLink={handleClickOnLink} />
         </motion.div>
         <motion.div
           initial={{ display: "block", opacity: 1 }}

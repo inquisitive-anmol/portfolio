@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import TextReveal from "../../ui/TextReveal";
 
-const MenuLinks = () => {
+const MenuLinks = ({handleClickOnLink}) => {
   const navLinks = [
     { name: "Home", link: "/" },
     { name: "About", link: "/about" },
@@ -16,6 +16,7 @@ const MenuLinks = () => {
         <Link
           key={index}
           to={link.link}
+          onClick={handleClickOnLink}
           className="text-black font-medium"
         >
           <TextReveal text={link.name} />
