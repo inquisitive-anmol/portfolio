@@ -2,6 +2,7 @@ import React from "react";
 import AnimatedHeading from "../../ui/AnimatedHeading";
 import AnimatedButton from "../../ui/AnimatedButton";
 import { motion } from "framer-motion";
+import MenuLinks from "./MenuLinks";
 
 const Header = () => {
   const [click, setClick] = React.useState(false);
@@ -26,7 +27,7 @@ const Header = () => {
         initial={initial}
         animate={click ? animate : initial}
         transition={{ duration: 2, ease: "easeInOut" }}
-        className="absolute flex items-start justify-end top-0 right-0 sm:top-8 p-3 sm:right-8 rounded-xl bg-amber-400 zindex"
+        className="absolute flex items-start justify-end top-0 right-0 sm:top-8 sm:right-8 rounded-xl bg-[#00d4ff]/95 zindex"
       >
         {/* <AnimatedButton
           text="Menu"
@@ -37,14 +38,30 @@ const Header = () => {
           index={1}
         /> */}
         <motion.div
-          initial={{ display: "block" , opacity: 1}}
-          animate={click ? { display: "none", opacity: 0 } : { display: "block", opacity: 1 }}
+          initial={{ display: "none", opacity: 0 }}
+          animate={
+            click
+              ? { display: "block", opacity: 1 }
+              : { display: "none", opacity: 0 }
+          }
+          transition={{ duration: 0.5, ease: "easeInOut", delay: 0.8 }}
+          className="absolute left-0 top-0 flex flex-col items-center justify-center rounded-lg w-[75%] h-full"
+        >
+          <MenuLinks />
+        </motion.div>
+        <motion.div
+          initial={{ display: "block", opacity: 1 }}
+          animate={
+            click
+              ? { display: "none", opacity: 0 }
+              : { display: "block", opacity: 1 }
+          }
           transition={{ duration: 0.9, ease: "easeInOut", delay: 0.5 }}
         >
           <AnimatedButton
             text="Menu"
             spanClassName="text-white font-medium"
-            divClassName={`right-6 top-3`}
+            divClassName={`sm:right-10 sm:top-4 right-14 top-10`}
             className="border-2 border-white py-2 px-3 rounded-full"
             handleOnClick={handleOnClick}
             index={1}
@@ -52,9 +69,13 @@ const Header = () => {
         </motion.div>
         <motion.div
           initial={{ display: "none", opacity: 0 }}
-          animate={click ? { display: "block", opacity: 1 } : { display: "none", opacity: 0 }}
+          animate={
+            click
+              ? { display: "block", opacity: 1 }
+              : { display: "none", opacity: 0 }
+          }
           transition={{ duration: 0.9, ease: "easeInOut", delay: 0.5 }}
-        > 
+        >
           <AnimatedButton
             text="Close"
             spanClassName="text-white font-medium"

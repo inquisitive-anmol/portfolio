@@ -7,7 +7,7 @@ const Hero = () => {
     <div
       data-scroll
       data-scroll-speed="1"
-      className="hero-section w-full relative flex items-center justify-center bg-amber-600"
+      className="hero-section w-full relative flex items-center justify-center"
     >
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -20,7 +20,7 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="w-26 h-26 sm:w-28 sm:h-28 rounded-full overflow-hidden xl:w-36 xl:h-36"
+          className="w-32 h-32 sm:w-36 sm:h-36 rounded-full overflow-hidden xl:w-40 xl:h-40"
         >
           <img
             src="https://images.unsplash.com/photo-1554151228-14d9def656e4?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -72,7 +72,7 @@ const Hero = () => {
           svgTrue={true}
           className="gap-0.5 px-5 sm:px-6 xl:px-8 py-2.5 sm:py-3 xl:py-4 text-base sm:text-lg xl:text-2xl font-semibold 
                     rounded-full  border border-[#E0E0E0]"
-          divClassName="mt-8 sm:mt-10 xl:mt-12"
+          divClassName="mt-10 xl:mt-12"
           spanClassName="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient"
         />
       </motion.div>
