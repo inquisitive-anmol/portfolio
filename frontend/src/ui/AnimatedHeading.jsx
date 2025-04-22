@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
-const AnimatedHeading = () => {
-  const text = "Anmol."; // Change this to your name
+const AnimatedHeading = ({text="Anmol", className}) => {
+  // const text = "Anmol."; // Change this to your name
 
   const letterVariants = {
     hidden: { opacity: 1, y: "-100%" }, // Start above and hidden
@@ -17,7 +17,7 @@ const AnimatedHeading = () => {
   };
 
   return (
-    <h1 className="w-fit overflow-hidden text-4xl xl:text-5xl font-extrabold">
+    <h1 className={`w-fit overflow-hidden ${className}`}>
       {text.split("").map((letter, index) => (
         <motion.span
           key={index}

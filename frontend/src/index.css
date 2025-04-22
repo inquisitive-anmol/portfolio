@@ -18,7 +18,7 @@ body,
   height: 100%;
   background-color: #0d0d0d;
   color: #ffffffe9;
-
+scroll-behavior: smooth;
 }
 
 html.has-scroll-smooth {

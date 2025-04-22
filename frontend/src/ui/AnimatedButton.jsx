@@ -66,10 +66,9 @@ function AnimatedButton({
   };
 
   return (
-    <a
+    <button
       onClick={() => handleOnClick(index)}
       className={`relative w-fit h-auto flex items-center justify-center bg-amber-800 ${divClassName}`}
-      href="#contact"
     >
       <motion.div
         onHoverStart={handleHoverStart}
@@ -154,7 +153,7 @@ function AnimatedButton({
           </svg>
         )}
       </motion.div>
-    </a>
+    </button>
   );
 }
 

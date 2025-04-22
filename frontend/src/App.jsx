@@ -5,9 +5,10 @@ import SocialIcons from "./components/SocialIcons";
 import Header from "./components/Header/Header";
 import LocomotiveScroll from "locomotive-scroll";
 import { Route, Routes } from "react-router-dom";
-import Section2 from "./components/Section2";
-import MenuLinks from "./components/Header/MenuLinks";
-import TextReveal from "./ui/TextReveal";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Skills from "./components/Skills";
 
 /* Locomotive scroll instance */
 
@@ -34,17 +35,12 @@ const App = () => {
         </div>
         <Routes>
           <Route path="/" element={<Hero />} />
-          <Route path="/about" element={<Section2 />} />
-          <Route path="/projects" element={<Section2 />} />
-          <Route path="/contact" element={<Section2 />} />
-          <Route path="/blog" element={<Section2 />} />
-          <Route path="/resume" element={<Section2 />} />
-          <Route path="/services" element={<Section2 />} />
-          <Route path="/testimonials" element={<Section2 />} />
+          <Route path="/blog" element={<Hero />} />
         </Routes>
-        <div>
-          <MenuLinks />
-        </div>
+        {/* <About /> */}
+        <Skills />
+        <Projects />
+        <Contact />
       </div>
     </>
   );

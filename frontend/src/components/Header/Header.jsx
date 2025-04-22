@@ -25,7 +25,7 @@ const Header = () => {
   return (
     <div className="w-full relative min-h-20 p-4 md:px-6 lg:px-8 lg:py-6 flex items-center justify-between">
       <div className="w-full h-auto">
-        <AnimatedHeading />
+        <AnimatedHeading className="text-4xl xl:text-5xl font-extrabold" />
       </div>
       <motion.div
         initial={initial}
