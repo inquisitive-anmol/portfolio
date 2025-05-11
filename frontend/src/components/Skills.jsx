@@ -11,21 +11,21 @@ const Skills = () => {
   ];
 
   return (
-    <div className="w-full overflow-hidden py-10 bg-black mt-8 -rotate-x-12 rotate-y-12">
+    <div id="skills" className="w-full overflow-hidden py-10 mt-8 lg:mt-20 opacity-80">
       {/* first */}
       <motion.div
-        className="flex space-x-4 whitespace-nowrap"
+        className="flex space-x-4 whitespace-nowrap h-18"
         animate={{ x: ["0%", "-50%"] }}
         transition={{
           repeat: Infinity,
-          duration: 5,
+          duration: 20,
           ease: "linear",
         }}
       >
         {[...tech, ...tech, ...tech, ...tech].map((item, index) => (
           <span
             key={index}
-            className="text-white text-4xl md:text-8xl font-normal flex items-center justify-center gap-1"
+            className="text-gradient text-3xl md:text-5xl font-normal flex items-center justify-center gap-1"
           >
             <div className="w-3 h-3 rounded-full bg-white"></div>{item}
           </span>
@@ -33,42 +33,42 @@ const Skills = () => {
       </motion.div>
       {/* second */}
       <motion.div
-        className="flex space-x-4 whitespace-nowrap"
+        className="flex space-x-4 whitespace-nowrap h-18"
         animate={{ x: ["-50%", "0%"] }}
         transition={{
           repeat: Infinity,
-          duration: 5,
+          duration: 20,
           ease: "linear",
         }}
       >
         {[...tech, ...tech, ...tech, ...tech].map((item, index) => (
           <span
             key={index}
-            className="text-white text-4xl md:text-8xl font-normal flex items-center justify-center gap-1"
+            className="text-gradient text-3xl md:text-5xl font-normal flex items-center justify-center gap-1"
           >
             <div className="w-3 h-3 rounded-full bg-white"></div>{item}
           </span>
         ))}
       </motion.div>
       {/* third */}
-      <motion.div
+      {/* <motion.div
         className="flex space-x-4 whitespace-nowrap"
         animate={{ x: ["0%", "-50%"] }}
         transition={{
           repeat: Infinity,
-          duration: 5,
+          duration: 20,
           ease: "linear",
         }}
       >
         {[...tech, ...tech, ...tech, ...tech].map((item, index) => (
           <span
             key={index}
-            className="text-white text-4xl md:text-8xl font-normal flex items-center justify-center gap-1"
+            className="text-white text-2xl md:text-4xl font-normal flex items-center justify-center gap-1"
           >
             <div className="w-3 h-3 rounded-full bg-white"></div>{item}
           </span>
         ))}
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };

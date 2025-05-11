@@ -13,25 +13,15 @@ const MenuLinks = ({ handleClickOnLink }) => {
   return (
     <div className="flex flex-col items-start justify-start space-y-2 pt-14 md:px-12  px-10 rounded-lg  w-full h-full text-2xl md:text-4xl md:space-y-5 font-medium">
       {navLinks.map((link, index) =>
-        index === 4 ? (
-          <Link
-            key={index}
-            to={link.link}
-            onClick={handleClickOnLink}
-            className="text-black font-medium"
-          >
-            <TextReveal text={link.name} />
-          </Link>
-        ) : (
-          <a
-            key={index}
-            href={index === 0 ? "/" : `#${link.link}`}
-            className="text-black font-medium"
-            onClick={handleClickOnLink}
-          >
-            <TextReveal text={link.name} />
-          </a>
-        )
+        <Link
+          key={index}
+          to={link.link}
+          onClick={handleClickOnLink}
+          className="text-black font-medium"
+        >
+          <TextReveal text={link.name} />
+        </Link>
+
       )}
     </div>
   );

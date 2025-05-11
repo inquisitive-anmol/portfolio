@@ -72,3 +72,43 @@ html.has-scroll-dragging {
 .zindex {
   z-index: 9999 !important;
 }
+
+/* .prime-gradient {
+   bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient
+} */
+
+
+/* Gradient text color */
+.text-gradient {
+  /* Create gradient background */
+  background-image: linear-gradient(
+    90deg, 
+    #22d3ee,  /* cyan-400 */
+    #a855f7,  /* purple-500 */
+    #ec4899   /* pink-500 */
+  );
+  
+  /* Clip background to text */
+  -webkit-background-clip: text;
+  background-clip: text;
+  
+  /* Make text transparent to show gradient */
+  color: transparent;
+  
+  /* Animation */
+  background-size: 300% 100%;
+  animation: gradient-animation 3s ease infinite;
+}
+
+/* Keyframes for animation */
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

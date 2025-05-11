@@ -9,8 +9,6 @@ const Header = () => {
   const handleOnClick = (index) => {
     // Handle button click event here
     index === 0 ? setClick(false) : setClick(true); // Updated to setClick(true) for index 1
-    console.log("Button clicked!");
-    console.log(click);
   };
 
   const handleClickOnLink = () => {
@@ -31,7 +29,7 @@ const Header = () => {
         initial={initial}
         animate={click ? animate : initial}
         transition={{ duration: 2, ease: "easeInOut" }}
-        className="absolute flex items-start justify-end top-0 right-0 sm:top-8 sm:right-8 rounded-xl bg-[#00d4ff]/95 zindex"
+        className="absolute flex items-start justify-end top-0 right-0 sm:top-0 sm:right-0 rounded-xl bg-[#00d4ff]/95 zindex"
       >
         <motion.div
           initial={{ display: "none", opacity: 0 }}
@@ -53,6 +51,7 @@ const Header = () => {
               : { display: "block", opacity: 1 }
           }
           transition={{ duration: 0.9, ease: "easeInOut", delay: 0.5 }}
+          className="bg-amber-300 top-0 right-0 sm:top-6 sm:right-6 absolute"
         >
           <AnimatedButton
             text="Menu"

@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import AnimatedButton from "../../ui/AnimatedButton";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <div
       data-scroll
@@ -74,6 +76,7 @@ const Hero = () => {
                     rounded-full  border border-[#E0E0E0]"
           divClassName="mt-10 xl:mt-12"
           spanClassName="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient"
+          handleOnClick={() => navigate("/contact")}
         />
       </motion.div>
     </div>
