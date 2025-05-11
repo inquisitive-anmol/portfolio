@@ -149,12 +149,12 @@ const ContactForm: React.FC = () => {
                             </h3>
                             <div className="space-y-4">
                                 <div className="flex items-start">
-                                    <Mail className="w-5 h-5 text-teal-600 dark:text-teal-400 mt-1 mr-3" />
+                                    <Mail className="w-5 h-5 text-cyan-500 dark:cyan-teal-400 mt-1 mr-3" />
                                     <div>
                                         <p className="font-medium text-gray-900 dark:text-white">Email</p>
                                         <a
                                             href={`mailto:${CONTACT_EMAIL}`}
-                                            className="text-gray-600 dark:text-gray-300 hover:text-teal-600 dark:hover:text-teal-400"
+                                            className="text-gray-200 hover:text-cyan-500  hover:dark:text-cyan-400"
                                         >
                                             {CONTACT_EMAIL}
                                         </a>
@@ -162,7 +162,7 @@ const ContactForm: React.FC = () => {
                                 </div>
 
                                 <div className="flex items-start">
-                                    <Phone className="w-5 h-5 text-teal-600 dark:text-teal-400 mt-1 mr-3" />
+                                    <Phone className="w-5 h-5 text-cyan-500 dark:cyan-teal-400 mt-1 mr-3" />
                                     <div>
                                         <p className="font-medium text-gray-900 dark:text-white">Phone</p>
                                         <p className="text-gray-600 dark:text-gray-300">Available upon request</p>
@@ -170,7 +170,7 @@ const ContactForm: React.FC = () => {
                                 </div>
 
                                 <div className="flex items-start">
-                                    <MapPin className="w-5 h-5 text-teal-600 dark:text-teal-400 mt-1 mr-3" />
+                                    <MapPin className="w-5 h-5 text-cyan-500 dark:cyan-teal-400 mt-1 mr-3" />
                                     <div>
                                         <p className="font-medium text-gray-900 dark:text-white">Location</p>
                                         <p className="text-gray-600 dark:text-gray-300">Remote / Worldwide</p>
