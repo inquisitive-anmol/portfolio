@@ -58,8 +58,8 @@ const FeaturedProjects = () => {
 
     return (
         <section
-            title="Featured Projects"
-            subtitle="A selection of my recent work"
+            title="About me"
+            subtitle="A brief intro about me"
             className="py-10 px-8 mt-10"
         >
             {loading ? (

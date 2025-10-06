@@ -99,8 +99,8 @@ function AnimatedButton({
             <defs>
               <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop offset="0%" stopColor="#06b6d4" /> {/* cyan-400 */}
-                <stop offset="50%" stopColor="#a855f7" /> {/* purple-500 */}
-                <stop offset="100%" stopColor="#ec4899" /> {/* pink-500 */}
+                <stop offset="50%" stopColor="#fff" /> {/* purple-500 */}
+                <stop offset="100%" stopColor="#06b6d4" /> {/* pink-500 */}
               </linearGradient>
             </defs>
             <path

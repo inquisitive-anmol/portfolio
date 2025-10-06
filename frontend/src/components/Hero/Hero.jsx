@@ -75,7 +75,7 @@ const Hero = () => {
           className="gap-0.5 px-5 sm:px-6 xl:px-8 py-2.5 sm:py-3 xl:py-4 text-base sm:text-lg xl:text-2xl font-semibold 
                     rounded-full  border border-[#E0E0E0]"
           divClassName="mt-10 xl:mt-12"
-          spanClassName="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient"
+          spanClassName="bg-gradient-to-r from-cyan-400 via-white to-cyan-400 bg-clip-text text-transparent animate-gradient"
           handleOnClick={() => navigate("/contact")}
         />
       </motion.div>
@@ -85,6 +85,3 @@ const Hero = () => {
 
 export default Hero;
 
-{
-  /* <Circular /> */
-}

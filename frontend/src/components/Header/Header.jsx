@@ -23,12 +23,12 @@ const Header = () => {
   return (
     <div className="w-full relative min-h-20 p-4 md:px-6 lg:px-8 lg:py-6 flex items-center justify-between">
       <div className="w-full h-auto">
-        <AnimatedHeading className="text-4xl xl:text-5xl font-extrabold" />
+        <AnimatedHeading className="text-4xl xl:text-5xl font-semibold" />
       </div>
       <motion.div
         initial={initial}
         animate={click ? animate : initial}
-        transition={{ duration: 2, ease: "easeInOut" }}
+        transition={{ duration: 1, ease: "easeInOut" }}
         className="absolute flex items-start justify-end top-0 right-0 sm:top-0 sm:right-0 rounded-xl bg-[#00d4ff]/95 zindex"
       >
         <motion.div
@@ -38,7 +38,7 @@ const Header = () => {
               ? { display: "block", opacity: 1 }
               : { display: "none", opacity: 0 }
           }
-          transition={{ duration: 0.5, ease: "easeInOut", delay: 0.8 }}
+          transition={{ duration: 0.2, ease: "easeInOut", delay: 0.5 }}
           className="absolute left-0 top-0 flex flex-col items-center justify-center rounded-lg w-[75%] h-full"
         >
           <MenuLinks handleClickOnLink={handleClickOnLink} />
@@ -50,7 +50,7 @@ const Header = () => {
               ? { display: "none", opacity: 0 }
               : { display: "block", opacity: 1 }
           }
-          transition={{ duration: 0.9, ease: "easeInOut", delay: 0.5 }}
+          transition={{ duration: 0.6, ease: "easeInOut", delay: 0.2 }}
           className="bg-amber-300 top-0 right-0 sm:top-6 sm:right-6 absolute"
         >
           <AnimatedButton
@@ -69,7 +69,7 @@ const Header = () => {
               ? { display: "block", opacity: 1 }
               : { display: "none", opacity: 0 }
           }
-          transition={{ duration: 0.9, ease: "easeInOut", delay: 0.5 }}
+          transition={{ duration: 0.6, ease: "easeInOut", delay: 0.2 }}
         >
           <AnimatedButton
             text="Close"

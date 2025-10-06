@@ -16,9 +16,9 @@ const Section: React.FC<SectionProps> = ({
   title,
   subtitle,
   className = '',
-  children,
   fullWidth = false,
   withContainer = true,
+  children,
 }) => {
   const headerVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -48,7 +48,7 @@ const Section: React.FC<SectionProps> = ({
     <>
       {(title || subtitle) && (
         <motion.div 
-          className="mb-10 text-center"
+          className="mb-14 text-center"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-100px' }}

@@ -25,7 +25,7 @@ const AnimatedHeading = ({text="Anmol", className}) => {
           variants={letterVariants}
           initial="hidden"
           animate="visible"
-          className="inline-block bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient"
+          className="inline-block text-white"
         >
           {letter}
         </motion.span>
